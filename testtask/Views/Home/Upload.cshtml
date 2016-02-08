@@ -1,0 +1,23 @@
+﻿@{
+    Layout = "../Shared/_Layout.cshtml";
+}
+@model testtask.Models.Result
+
+@if (Model != null)
+{
+    <div>Upload result:</div>
+    if (Model.Success)
+    {
+        <div style="color: darkgreen">Success</div>
+    }
+    else
+    {
+        <div style="color: brown">Error @Model.Message</div>
+    }
+}
+
+@using (Html.BeginForm("Upload", "Home", FormMethod.Post, new {enctype = "multipart/form-data"}))
+{
+    <input type="file" name="file"/>
+    <input type="submit" name="submit" value="Upload"/>
+}

@@ -1,0 +1,25 @@
+﻿@{
+    Layout = "../Shared/_Layout.cshtml"; 
+}
+@model testtask.Models.Result<List<testtask.Models.BusinessLogic.AssemblyItem>>
+
+<div>
+    @if (Model != null && Model.Success)
+    {
+        var list = Model.Value;
+        foreach (var info in list)
+        {
+            <div>View history for @Html.ActionLink(info.FileName, "HistoryItem", new { guid = info.Id })</div>
+        }
+
+        if (list.Count == 0)
+        {
+            <div>There are no tracked assemblies</div>
+        }
+    }
+
+    @if (Model != null && Model.Failure)
+    {
+        <div style="color: brown">Error: @Model.Message</div>
+    }
+</div>

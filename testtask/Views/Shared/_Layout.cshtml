@@ -1,0 +1,20 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Web App</title>
+</head>
+<body>
+<div style="margin-bottom: 25px;">
+    Menu:
+    @Html.ActionLink("Upload", "Upload", "Home")
+    @Html.ActionLink("History", "History", "Home")
+</div>
+@RenderBody()
+</body>
+</html>

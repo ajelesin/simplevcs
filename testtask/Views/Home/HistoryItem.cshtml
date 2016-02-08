@@ -1,0 +1,32 @@
+﻿@{
+    Layout = "../Shared/_Layout.cshtml";
+}
+@model testtask.Models.Result<List<testtask.Models.BusinessLogic.AssemblyHistoryItem>>
+
+
+<div>
+    @if (Model != null && Model.Success)
+    {
+        var list = Model.Value;
+        foreach (var info in list)
+        {
+            <div>Full Name: @info.FullName</div>
+            <div>Member Type: @info.Type</div>
+            <div>Commit Date: @info.CommitDate.ToString("dd'/'MM'/'yyyy")</div>
+            <div>Changed Date: @info.ChangedDate.ToString("dd'/'MM'/'yyyy")</div>
+            <div>Author: @info.Author</div>
+            <div>Comment: @info.Description</div>
+            <hr/>
+        }
+
+        if (list.Count == 0)
+        {
+            <div>There are no history</div>
+        }
+    }
+
+    @if (Model != null && Model.Failure)
+    {
+        <div style="color: brown">Error: @Model.Message</div>
+    }
+</div>
