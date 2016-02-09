@@ -1,7 +1,7 @@
 ﻿using System.Web;
 using System.Web.Mvc;
-using testtask.Models.BusinessLogic;
 using testtask.Models.DataAccess;
+using testtask.Models.Logic;
 
 namespace testtask.Controllers
 {

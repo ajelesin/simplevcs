@@ -18,7 +18,7 @@ namespace testtask
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
 
-            Database.SetInitializer(new DropCreateDatabaseAlways<EntityContext>());
+            Database.SetInitializer(new CreateDatabaseIfNotExists<EntityContext>());
         }
     }
 }

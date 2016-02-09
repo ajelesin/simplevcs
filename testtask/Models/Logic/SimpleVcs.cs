@@ -4,7 +4,7 @@ using System.IO;
 using System.Linq;
 using testtask.Models.DataAccess;
 
-namespace testtask.Models.BusinessLogic
+namespace testtask.Models.Logic
 {
     public class SimpleVcs
     {

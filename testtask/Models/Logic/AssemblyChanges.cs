@@ -5,7 +5,7 @@ using System.Reflection;
 using System.Runtime.InteropServices;
 using AnnotationLib;
 
-namespace testtask.Models.BusinessLogic
+namespace testtask.Models.Logic
 {
     public class AssemblyChanges
     {
@@ -58,7 +58,7 @@ namespace testtask.Models.BusinessLogic
                             ChangedDate = changeAttr.ChangeDate,
                             Description = changeAttr.Description,
                             Type = MemberType.Method,
-                            FullName = string.Format("{0}.{1}", type.FullName, methodInfo.Name)
+                            FullName = $"{type.FullName}.{methodInfo.Name}"
                         }));
                 }
             }

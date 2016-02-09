@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace testtask.Models.BusinessLogic
+namespace testtask.Models.Logic
 {
     public class AssemblyItem
     {

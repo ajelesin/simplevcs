@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace testtask.Models.BusinessLogic
+namespace testtask.Models.Logic
 {
     public class AssemblyHistoryItem
     {

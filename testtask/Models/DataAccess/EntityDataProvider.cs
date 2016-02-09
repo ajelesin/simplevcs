@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
-using testtask.Models.BusinessLogic;
+using testtask.Models.Logic;
 
 namespace testtask.Models.DataAccess
 {

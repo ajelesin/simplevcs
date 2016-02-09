@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using testtask.Models.BusinessLogic;
+using testtask.Models.Logic;
 
 namespace testtask.Models.DataAccess
 {
